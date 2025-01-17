@@ -121,6 +121,7 @@ main {
 
 .teams {
     margin-top: 85px;
+    margin-bottom: 85px;
     align-items: center;
 }
 
@@ -150,21 +151,81 @@ main {
     padding-bottom: 25px;
 }
 
+/* our features styles */
+
+#feature-title-main {
+    border-left: 5px solid #FF900E;
+    padding-left: 21px;
+}
+
+.features-title {
+    font-weight: bold;
+    font-size: 2.8rem;
+}
+
+/* features section styles */
+
+.features {
+    gap: 140px;
+}
+
+.feature-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 10px auto;
+}
+
+.feature-card {
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#experience-badge {
+    height: 200px;
+    width: 342px;
+    background-color: #FF900E;
+    border-radius: 8px;
+    border: none;
+    padding: 42px 42px;
+    margin: -100px;
+}
+
+#experience-years {
+    font-weight: bold;
+    font-size: 4.06rem;
+    color: white;
+
+}
+
+#experience {
+    font-weight: 500;
+    font-size: 1.56rem;
+    color: white;
+}
+
+.architect-image {
+    max-width: 100%;
+}
+
+
+
 /* Some facts styles */
 
 
-.facts-description{
+.facts-description {
     max-width: 550px;
 }
 
-.facts{
+.facts {
     margin: 130px auto;
 }
 
 
 /* some facts boc styles */
 
-.fact-card{
+.fact-card {
     border: 1px solid #FF900E;
     border-radius: 8px;
     width: 240px;
@@ -174,20 +235,20 @@ main {
     justify-content: center;
 }
 
-.facts-container{
+.facts-container {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(4 , 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.fact-number{
+.fact-number {
     font-weight: 600;
     font-size: 2.8rem;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 
-.fact-name{
+.fact-name {
     font-weight: 600;
     font-size: 1.25rem;
     margin-top: 10px;
@@ -195,23 +256,23 @@ main {
 
 /* sponsors styles */
 
-.sponsor-title{
+.sponsor-title {
     font-weight: bold;
     font-size: 2.8rem;
 }
 
-.sponsor-info{
+.sponsor-info {
     max-width: 540px;
     margin: 50px auto;
     text-align: center;
 }
 
-.sponsor-company{
+.sponsor-company {
     display: grid;
-    grid-template-columns: repeat(5 , 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 
-.sponsor-company > img{
+.sponsor-company>img {
     filter: grayscale(100%);
 }
 
@@ -224,7 +285,8 @@ main {
 
     .navbar,
     .nav-links,
-    .teams {
+    .teams,
+    .features {
         flex-direction: column;
     }
 
@@ -234,24 +296,22 @@ main {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .facts-container, 
-    .sponsor-company{
+    .facts-container,
+    .sponsor-company {
         justify-items: center;
         gap: 20px;
     }
 
-    .teams-features, 
-    .facts
-     {
+    .teams-features,
+    .facts {
         margin-left: 20px;
     }
 
+    #experience-badge {
+        margin: 10px auto;
+    }
 
 }
-
-
-
-
 
 
 
@@ -259,39 +319,49 @@ main {
 /* responsive for tablet */
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  
-.teams{
-    flex-direction: column;
-}
 
-.teams-features{
-    margin-left: 0;
-    text-align: center;
-}
+    .teams,
+    .features {
+        flex-direction: column;
+    }
 
-.nav-item{
-    margin-right: 10px;
-}
+    .teams-features {
+        margin-left: 0;
+        text-align: center;
+    }
 
-.facts-container, 
-.sponsor-company{
-    grid-template-columns: repeat(2 , 1fr);
-    justify-items: center;
-}
+    .nav-item {
+        margin-right: 10px;
+    }
 
-.facts, 
-.facts-description{
-    margin: 0 auto;
-    text-align: center;
-}
+    #experience-badge{
+        
+        margin: 0 auto;
+    }
 
-.facts-container{
-    gap: 20px;
-}
+    .architect-image{
+        justify-items: center;
+    }
 
-.sponsor-company{
-    align-content: center;
-    gap: 20px;
-}
+    .facts-container,
+    .sponsor-company {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .facts,
+    .facts-description {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .facts-container {
+        gap: 20px;
+    }
+
+    .sponsor-company {
+        align-content: center;
+        gap: 20px;
+    }
 
 }
